@@ -735,7 +735,7 @@ add_sort_option_dirfirst(scanner_t *s, prop_t *model)
   prop_t *n = prop_create_root(NULL);
   prop_t *m = prop_create(n, "metadata");
   prop_t *value = prop_create(n, "value");
-  int v = kv_url_opt_get_int(s->s_url, KVSTORE_DOMAIN_SYS, "dirsfirst", 1);
+  int v = kv_url_opt_get_int(s->s_url, KVSTORE_DOMAIN_SYS, "dirsfirst", 0);
 
   prop_set_string(prop_create(n, "type"), "bool");
   prop_set_int(prop_create(n, "enabled"), 1);
